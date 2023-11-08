@@ -42,12 +42,15 @@ export default function App() {
   }
 
   const onClickRedBtn = () => {
-    prompt("어렵나요 ? 어려우니까 해내면 더 재밌습니다. 화이팅")
+    prompt("파이팅")
 
   }
 
   const onClickSaveBtn = () => {
     const deleteComma = price.replace(/,/g, "")
+    if(!name && !price ) {
+      return alert("이름과 가격을 적으세요")
+    }
     alert(`name : ${name}, price : ${deleteComma}원 `)
   }
 
